@@ -42,9 +42,9 @@ export default function UserModal({ isOpen, onClose, user, onSave }) {
     e.preventDefault();
     try {
       if (user) {
-        await axios.put(`http://localhost:5000/api/auth/users/${user._id}`, formData);
+        await axios.put(`https://custom-gpt-backend-sigma.vercel.app/api/auth/users/${user._id}`, formData);
       } else {
-        await axios.post('http://localhost:5000/api/auth/adduser', formData);
+        await axios.post('https://custom-gpt-backend-sigma.vercel.app/api/auth/adduser', formData);
       }
       onSave();
     } catch (error) {

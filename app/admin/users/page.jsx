@@ -30,7 +30,7 @@ export default function UsersPage() {
   const fetchUsers = async () => {
     try {
       setIsLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/auth/users');
+      const { data } = await axios.get('https://custom-gpt-backend-sigma.vercel.app/api/auth/users');
       setUsers(data);
       setFilteredUsers(data);
     } catch (error) {
@@ -49,7 +49,7 @@ export default function UsersPage() {
     if (!confirm('Are you sure you want to delete this user?')) return;
     
     try {
-      await axios.delete(`http://localhost:5000/api/auth/users/${userId}`);
+      await axios.delete(`https://custom-gpt-backend-sigma.vercel.app/api/auth/users/${userId}`);
       fetchUsers();
     } catch (error) {
       console.error('Failed to delete user:', error);

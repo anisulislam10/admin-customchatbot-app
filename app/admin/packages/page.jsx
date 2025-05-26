@@ -19,7 +19,7 @@ export default function PackagesPage() {
   const fetchPackages = async () => {
     try {
       setIsLoading(true);
-      const { data } = await axios.get('http://localhost:5000/api/package/getpackages');
+      const { data } = await axios.get('https://custom-gpt-backend-sigma.vercel.app/api/package/getpackages');
       setPackages(data);
       setError('');
     } catch (err) {
@@ -32,7 +32,7 @@ export default function PackagesPage() {
 
   const handleCreate = async (pkgData) => {
     try {
-      await axios.post('http://localhost:5000/api/package/savepackages', pkgData);
+      await axios.post('https://custom-gpt-backend-sigma.vercel.app/api/package/savepackages', pkgData);
       fetchPackages();
       setIsFormOpen(false);
     } catch (err) {
@@ -42,7 +42,7 @@ export default function PackagesPage() {
 
   const handleUpdate = async (id, pkgData) => {
     try {
-      await axios.put(`http://localhost:5000/api/package/updatepackages/${id}`, pkgData);
+      await axios.put(`https://custom-gpt-backend-sigma.vercel.app/api/package/updatepackages/${id}`, pkgData);
       fetchPackages();
       setCurrentPackage(null);
       setIsFormOpen(false);
@@ -55,7 +55,7 @@ export default function PackagesPage() {
     if (!confirm('Are you sure you want to delete this package?')) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/package/deletepackages/${id}`);
+      await axios.delete(`https://custom-gpt-backend-sigma.vercel.app/api/package/deletepackages/${id}`);
       fetchPackages();
     } catch (err) {
       setError('Failed to delete package');
