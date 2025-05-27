@@ -67,6 +67,7 @@ export default function PackagesPage() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-2xl font-bold text-gray-800">Subscription Packages</h1>
+          {!isFormOpen?
           <button
             onClick={() => {
               setCurrentPackage(null);
@@ -86,8 +87,9 @@ export default function PackagesPage() {
                 clipRule="evenodd"
               />
             </svg>
-            Add Package
+            {!isFormOpen?"Add Package":''}
           </button>
+          :''}
         </div>
 
         {error && (

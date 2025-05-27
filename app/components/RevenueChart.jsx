@@ -27,7 +27,7 @@ export default function RevenueChart() {
     datasets: [
       {
         label: 'Revenue',
-        data: [5000, 8000, 12000, 9000, 15000, 18000, 20000],
+        data: [0, 0,0, 0, 0, 0,0],
         borderColor: 'rgb(79, 70, 229)',
         backgroundColor: 'rgba(79, 70, 229, 0.5)',
         tension: 0.3,

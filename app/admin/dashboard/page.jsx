@@ -5,18 +5,18 @@ import RevenueChart from '../../components/RevenueChart';
 import RecentActivity from '../../components/RecentActivity';
 export default function DashboardPage() {
   const stats = [
-    { name: 'Total Revenue', value: '$24,567', change: '+12%', changeType: 'positive' },
-    { name: 'Active Subscriptions', value: '1,234', change: '+5%', changeType: 'positive' },
-    { name: 'New Users', value: '89', change: '-3%', changeType: 'negative' },
-    { name: 'Churn Rate', value: '2.4%', change: '-0.8%', changeType: 'positive' },
+    { name: 'Total Revenue', value: '0', change: '0', changeType: 'positive' },
+    { name: 'Active Subscriptions', value: '0', change: '0', changeType: 'positive' },
+    { name: 'New Users', value: '0', change: '0', changeType: 'negative' },
+    { name: 'Churn Rate', value: '0', change: '0', changeType: 'positive' },
   ];
 
   const recentActivity = [
-    { id: 1, user: 'John Doe', action: 'Subscribed to Premium', time: '2 minutes ago' },
-    { id: 2, user: 'Jane Smith', action: 'Cancelled subscription', time: '15 minutes ago' },
-    { id: 3, user: 'Robert Johnson', action: 'Upgraded to Business', time: '1 hour ago' },
-    { id: 4, user: 'Emily Davis', action: 'Downgraded to Basic', time: '3 hours ago' },
-    { id: 5, user: 'Michael Wilson', action: 'Subscribed to Premium', time: '5 hours ago' },
+    // { id: 1, user: 'John Doe', action: 'Subscribed to Premium', time: '2 minutes ago' },
+    // { id: 2, user: 'Jane Smith', action: 'Cancelled subscription', time: '15 minutes ago' },
+    // { id: 3, user: 'Robert Johnson', action: 'Upgraded to Business', time: '1 hour ago' },
+    // { id: 4, user: 'Emily Davis', action: 'Downgraded to Basic', time: '3 hours ago' },
+    // { id: 5, user: 'Michael Wilson', action: 'Subscribed to Premium', time: '5 hours ago' },
   ];
 
   return (

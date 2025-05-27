@@ -26,8 +26,8 @@ export default function AdminLayout({ children }) {
     { name: 'Dashboard', path: '/admin/dashboard', icon: <FiPieChart className="w-5 h-5" /> },
     { name: 'Packages', path: '/admin/packages', icon: <FiBox className="w-5 h-5" /> },
     { name: 'Users', path: '/admin/users', icon: <FiUsers className="w-5 h-5" /> },
-    { name: 'Analytics', path: '/admin/analytics', icon: <FiPieChart className="w-5 h-5" /> },
-    { name: 'Settings', path: '/admin/settings', icon: <FiSettings className="w-5 h-5" /> },
+    { name: 'Analytics', path: '#', icon: <FiPieChart className="w-5 h-5" /> },
+    { name: 'Settings', path: '#', icon: <FiSettings className="w-5 h-5" /> },
   ];
 
   return (
@@ -71,8 +71,8 @@ export default function AdminLayout({ children }) {
         {/* Navigation */}
         <nav className="mt-4">
           <ul>
-            {navItems.map((item) => (
-              <li key={item.path}>
+            {navItems.map((item,index) => (
+              <li key={index}>
                 <Link
                   href={item.path}
                   className={`flex items-center px-6 py-3 text-sm font-medium transition-colors ${
